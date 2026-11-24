@@ -133,30 +133,3 @@ Xcode 16 以降で `StickyHeaderPager.xcodeproj` を開き、iOS 18 以降のシ
 ```sh
 xcodebuild -scheme StickyHeaderPager -destination 'platform=iOS Simulator,name=iPhone 16' test
 ```
-
-## 公開手順
-
-このフォルダには git の履歴も作者情報も含まれていません。コミットの作者・`LICENSE` の名前・リポジトリの持ち主は、すべて実行する Mac の設定から決まります。
-
-1. 実行する Mac の設定が、公開に使いたいものになっているか確かめる
-
-   ```sh
-   git config --global user.name
-   git config --global user.email
-   gh auth status
-   ```
-
-2. `LICENSE` の `<YOUR NAME>` を `git config user.name` の値で埋める
-
-   ```sh
-   sed -i '' "s/<YOUR NAME>/$(git config --global user.name)/" LICENSE
-   ```
-
-3. コミットしてリポジトリを作る（作者は手順 1 の設定、リポジトリの持ち主は `gh` でログインしているアカウントになる）
-
-   ```sh
-   git init
-   git add .
-   git commit -m "Add sticky header pager sample"
-   gh repo create StickyHeaderPager --public --source=. --push
-   ```
