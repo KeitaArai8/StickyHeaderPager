@@ -15,14 +15,16 @@ iOS 18+ が必要です。`ScrollPosition`（プログラムからのスクロ�
 
 ## 再現する UX
 
+録画を押すと元の mp4 を開きます。
+
 | No | 挙動 | 録画 |
 |---|---|---|
-| U1 | 下へスクロールするとヘッダーが一覧と一緒に上へ隠れ、上部タブは画面上端にピン留めされて残る | [U1-collapse-and-pin.mp4](Docs/U1-collapse-and-pin.mp4) |
-| U2 | 上へ戻すときは、一覧の先頭が近づいたときにだけヘッダーが出てくる（途中で少し戻しただけでは出てこない） | [U2-header-returns-near-top.mp4](Docs/U2-header-returns-near-top.mp4) |
-| U3 | ページごとに縦のスクロール位置が保たれる | [U3-per-page-position.mp4](Docs/U3-per-page-position.mp4) |
-| U4 | タブを切り替えてもヘッダーの隠れ具合は変わらず、遷移先の一覧を差の分だけずらしてヘッダーと一覧の境目を合わせる。遷移先が先頭付近なら境目まで引き上げる | [U4-tab-switch-alignment.mp4](Docs/U4-tab-switch-alignment.mp4) |
-| U5 | 横ページングのスワイプ途中で見えてくる隣のページも、現れた時点で境目が合っている | [U5-swipe-alignment.mp4](Docs/U5-swipe-alignment.mp4) |
-| U6 | ヘッダーの上で縦にドラッグすると選択中のページの一覧がスクロールする。指を離すと短い easeOut で流れ、短い一覧ではその下端で止まる | [U6-header-drag.mp4](Docs/U6-header-drag.mp4) |
+| U1 | 下へスクロールするとヘッダーが一覧と一緒に上へ隠れ、上部タブは画面上端にピン留めされて残る | [<img src="Docs/U1-collapse-and-pin.gif" width="240" alt="U1-collapse-and-pin">](Docs/U1-collapse-and-pin.mp4) |
+| U2 | 上へ戻すときは、一覧の先頭が近づいたときにだけヘッダーが出てくる（途中で少し戻しただけでは出てこない） | [<img src="Docs/U2-header-returns-near-top.gif" width="240" alt="U2-header-returns-near-top">](Docs/U2-header-returns-near-top.mp4) |
+| U3 | ページごとに縦のスクロール位置が保たれる | [<img src="Docs/U3-per-page-position.gif" width="240" alt="U3-per-page-position">](Docs/U3-per-page-position.mp4) |
+| U4 | タブを切り替えてもヘッダーの隠れ具合は変わらず、遷移先の一覧を差の分だけずらしてヘッダーと一覧の境目を合わせる。遷移先が先頭付近なら境目まで引き上げる | [<img src="Docs/U4-tab-switch-alignment.gif" width="240" alt="U4-tab-switch-alignment">](Docs/U4-tab-switch-alignment.mp4) |
+| U5 | 横ページングのスワイプ途中で見えてくる隣のページも、現れた時点で境目が合っている | [<img src="Docs/U5-swipe-alignment.gif" width="240" alt="U5-swipe-alignment">](Docs/U5-swipe-alignment.mp4) |
+| U6 | ヘッダーの上で縦にドラッグすると選択中のページの一覧がスクロールする。指を離すと短い easeOut で流れ、短い一覧ではその下端で止まる | [<img src="Docs/U6-header-drag.gif" width="240" alt="U6-header-drag">](Docs/U6-header-drag.mp4) |
 
 ## 仕組み
 
